@@ -1,48 +1,33 @@
 (() => {
-  const header = document.querySelector('.header');
-  const toggle = document.querySelector('.menu-toggle');
-  const menu = document.querySelector('.menu');
+  const toggle = document.querySelector('.nav-toggle');
+  const navList = document.querySelector('.nav-list');
 
-  // Sticky header subtle state
-  const onScroll = () => {
-    if (!header) return;
-    header.classList.toggle('scrolled', window.scrollY > 8);
+  if (!toggle || !navList) return;
+
+  const setOpen = (open) => {
+    toggle.setAttribute('aria-expanded', String(open));
+    navList.classList.toggle('is-open', open);
   };
-  window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
 
-  // Mobile menu
-  if (toggle && menu) {
-    const setExpanded = (value) => {
-      toggle.setAttribute('aria-expanded', String(value));
-      menu.classList.toggle('is-open', value);
-      document.body.classList.toggle('no-scroll', value);
-    };
+  toggle.addEventListener('click', () => {
+    const open = toggle.getAttribute('aria-expanded') === 'true';
+    setOpen(!open);
+  });
 
-    toggle.addEventListener('click', () => {
-      const expanded = toggle.getAttribute('aria-expanded') === 'true';
-      setExpanded(!expanded);
-    });
+  navList.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => setOpen(false));
+  });
 
-    // Close on link click
-    menu.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => setExpanded(false));
-    });
+  document.addEventListener('click', (e) => {
+    const open = toggle.getAttribute('aria-expanded') === 'true';
+    if (!open) return;
+    if (toggle.contains(e.target) || navList.contains(e.target)) return;
+    setOpen(false);
+  });
 
-    // Close on outside click
-    document.addEventListener('click', (e) => {
-      const isOpen = toggle.getAttribute('aria-expanded') === 'true';
-      if (!isOpen) return;
-      const target = e.target;
-      if (target === toggle || toggle.contains(target) || menu.contains(target)) return;
-      setExpanded(false);
-    });
-
-    // Close on ESC
-    document.addEventListener('keydown', (e) => {
-      const isOpen = toggle.getAttribute('aria-expanded') === 'true';
-      if (!isOpen) return;
-      if (e.key === 'Escape') setExpanded(false);
-    });
-  }
+  document.addEventListener('keydown', (e) => {
+    const open = toggle.getAttribute('aria-expanded') === 'true';
+    if (!open) return;
+    if (e.key === 'Escape') setOpen(false);
+  });
 })();
