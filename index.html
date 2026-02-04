@@ -1,120 +1,620 @@
-
 <!DOCTYPE html>
 <html lang="it">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dott.ssa Mafalda Puzone - Biologa Nutrizionista</title>
-  <meta name="description" content="Biologa Nutrizionista specializzata in nutrizione clinica.">
+  <title>Dott.ssa Mafalda Puzone - Biologa Nutrizionista | Somma Vesuviana</title>
+  <meta name="description" content="Biologa Nutrizionista specializzata in nutrizione clinica. 30 anni di esperienza in piani alimentari personalizzati, analisi bioimpedenzionometrica e gestione patologie metaboliche.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<header class="header">
-  <div class="container header-inner">
-    <div class="brand">
-      <div class="brand-mark">MP</div>
+  <header class="header">
+    <div class="container">
+      <a class="brand" href="#home" aria-label="Dott.ssa Mafalda Puzone">
+        <span class="brand-mark">MP</span>
+        <span class="brand-text">
+          <span class="brand-name">Dott.ssa Mafalda Puzone</span>
+          <span class="brand-sub">Biologa Nutrizionista</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" aria-label="Apri menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" aria-label="Menu principale">
+        <a href="#home">Home</a>
+        <a href="#chi-sono">Chi Sono</a>
+        <a href="#servizi">Servizi</a>
+        <a href="#metodologia">Metodologia</a>
+        <a href="#competenze">Competenze</a>
+        <a href="#contatti">Contatti</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="pill">Esperienza Trentennale</div>
+          <h1>Nutrizione Clinica su Misura per il Tuo Benessere</h1>
+          <p class="lead">Piani alimentari personalizzati basati su evidenze scientifiche, analisi bioimpedenzionometrica e approccio multidisciplinare. Un percorso nutrizionale costruito sulle tue specifiche esigenze metaboliche, patologiche e personali. Piani alimentari settimanali per Case Famiglia, Alloggi per adolescenti, Case Circondariali, Ospedali.</p>
+
+          <div class="stats">
+            <div class="stat"><div class="stat-n">30+</div><div class="stat-l">Anni di Esperienza</div></div>
+            <div class="stat"><div class="stat-n">3</div><div class="stat-l">Lauree Specialistiche</div></div>
+            <div class="stat"><div class="stat-n">6+</div><div class="stat-l">Aree di Specializzazione</div></div>
+          </div>
+
+          <div class="cta">
+            <a class="btn primary" href="#contatti">Prenota una Consulenza</a>
+            <a class="btn ghost" href="tel:+393333213015">3333213015</a>
+          </div>
+        </div>
+
+        <!-- Ordine invertito: hero usa la foto studio -->
+        <div class="hero-media">
+          <img src="assets/img/studio-bilancia.jpg" alt="Studio professionale" loading="lazy" decoding="async">
+        </div>
+      </div>
+    </section>
+
+    <section id="chi-sono" class="section">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">Profilo Professionale</div>
+          <h2>Chi Sono</h2>
+        </div>
+
+        <div class="about-grid">
+          <!-- Ordine invertito: qui ritratto -->
+          <div class="about-photo">
+            <img src="assets/img/mafaldapuzone-ritratto.jpg" alt="Foto professionale" loading="lazy" decoding="async">
+          </div>
+
+          <div class="about-body">
+            <p class="about-intro">Sono la <strong>Dott.ssa Mafalda Puzone</strong>, Biologa Nutrizionista con un'esperienza trentennale nel campo della nutrizione clinica. Il mio approccio si basa sull'integrazione di competenze multidisciplinari acquisite attraverso tre percorsi di laurea specifici, che mi permettono di offrire una visione olistica e scientificamente fondata della nutrizione.</p>
+
+            <div class="panel">
+              <h3>Formazione Accademica</h3>
+              <ul class="list">
+                <li><strong>Laurea in Biologia</strong><br>Università degli Studi di Napoli Federico II</li>
+                <li><strong>Laurea in Dietologia</strong><br>Università degli Studi di Napoli Federico II - Focus su nutrizione clinica e terapia alimentare</li>
+                <li><strong>Laurea in Farmacia</strong><br>Università degli Studi di Napoli Federico II - Approfondimento in farmacologia e interazioni nutriente-farmaco</li>
+              </ul>
+            </div>
+
+            <div class="panel">
+              <h3>Specializzazioni e Competenze</h3>
+              <ul class="list">
+                <li><strong>Analisi Antropometriche Avanzate</strong><br>Valutazione composizione corporea con strumentazione di precisione</li>
+                <li><strong>Bioimpedenzionometria (BIA)</strong><br>Analisi dettagliata di massa magra, massa grassa, idratazione e metabolismo basale</li>
+                <li><strong>Nutrizione Sportiva Avanzata</strong><br>Programmazione nutrizionale per atleti e sportivi a tutti i livelli</li>
+                <li><strong>Master in Nutrizione Clinica</strong><br>Formazione continua con corsi di perfezionamento e aggiornamento professionale</li>
+              </ul>
+            </div>
+
+            <div class="panel">
+              <h3>Dati Professionali</h3>
+              <div class="rows">
+                <div class="row"><span>Codice Fiscale</span><strong>PZNMLD66P69E855F</strong></div>
+                <div class="row"><span>Partita IVA</span><strong>03966881215</strong></div>
+                <div class="row"><span>Iscrizione Albo</span><strong>042160</strong></div>
+              </div>
+            </div>
+
+            <div class="panel accent">
+              <h3>Il Mio Approccio Metodologico</h3>
+              <p>La mia pratica professionale si fonda su un approccio scientifico rigoroso e personalizzato. Elaboro piani alimentari seguendo scrupolosamente le <strong>linee guida LARN/SINU</strong> (Livelli di Assunzione di Riferimento di Nutrienti ed energia / Società Italiana di Nutrizione Umana), integrando quando appropriato protocolli di dieta metabolica e, in casi selezionati, diete semi-chetogeniche controllate.</p>
+              <p>Ogni piano nutrizionale viene costruito tenendo conto non solo delle esigenze metaboliche e patologiche del paziente, ma anche delle sue preferenze personali, culturali e religiose, garantendo così la massima aderenza e sostenibilità nel lungo termine.</p>
+              <div class="note">Non utilizzo né prescrivo farmaci anoressizzanti o similari - Il percorso nutrizionale si basa esclusivamente su alimentazione equilibrata e stile di vita sano</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="servizi" class="section alt">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">I Miei Servizi</div>
+          <h2>Aree di Intervento Specialistico</h2>
+          <p class="sublead">Ogni servizio è progettato per rispondere a specifiche esigenze nutrizionali attraverso protocolli personalizzati e supportati da evidenze scientifiche.</p>
+        </div>
+
+        <div class="grid cards">
+          <article class="card service">
+      <div class="card-top">
+        <div class="pill num">01</div>
+        <h3>Piani Alimentari Personalizzati</h3>
+      </div>
+      <p>Elaborazione di programmi nutrizionali completamente su misura, basati su analisi antropometriche dettagliate e valutazione bioimpedenzionometrica della composizione corporea.</p>
+      <ul class="list">
+        <li>Anamnesi alimentare completa</li>
+<li>Analisi BIA (Body Impedance Analysis)</li>
+<li>Calcolo del metabolismo basale</li>
+<li>Piano alimentare settimanale dettagliato con suggerimenti pratici</li>
+      </ul>
+    </article>
+<article class="card service">
+      <div class="card-top">
+        <div class="pill num">02</div>
+        <h3>Nutrizione per Patologie Metaboliche</h3>
+      </div>
+      <p>Gestione nutrizionale specializzata per patologie croniche che richiedono un approccio alimentare terapeutico mirato e monitorato.</p>
+      <ul class="list">
+        <li>Diabete mellito (tipo 1, tipo 2, gestazionale)</li>
+<li>Patologie cardiovascolari e ipertensione</li>
+<li>Dislipidemia e ipercolesterolemia</li>
+<li>Steatosi epatica (fegato grasso)</li>
+<li>Sindrome metabolica</li>
+<li>Obesità e sovrappeso</li>
+      </ul>
+    </article>
+<article class="card service">
+      <div class="card-top">
+        <div class="pill num">03</div>
+        <h3>Nutrizione per Patologie Gastrointestinali</h3>
+      </div>
+      <p>Piani alimentari specifici per disturbi e patologie dell'apparato digerente, con protocolli di esclusione/reintroduzione controllata.</p>
+      <ul class="list">
+        <li>Morbo di Crohn e colite ulcerosa</li>
+<li>Sindrome dell'intestino irritabile (IBS)</li>
+<li>Reflusso gastroesofageo (GERD)</li>
+<li>Dispepsia e gastrite</li>
+<li>Diverticolosi e diverticolite</li>
+<li>Malassorbimenti intestinali</li>
+      </ul>
+    </article>
+<article class="card service">
+      <div class="card-top">
+        <div class="pill num">04</div>
+        <h3>Nutrizione per Insufficienza Renale</h3>
+      </div>
+      <p>Gestione nutrizionale specializzata per pazienti con patologie renali, inclusi protocolli per dialisi peritoneale ed emodialisi.</p>
+      <ul class="list">
+        <li>Insufficienza renale cronica (CKD)</li>
+<li>Dieta ipoproteica controllata</li>
+<li>Gestione elettroliti (potassio, fosforo, sodio)</li>
+<li>Nutrizione in dialisi</li>
+<li>Prevenzione sarcopenia</li>
+<li>Monitoraggio stato nutrizionale</li>
+      </ul>
+    </article>
+<article class="card service">
+      <div class="card-top">
+        <div class="pill num">05</div>
+        <h3>Gestione Intolleranze e Allergie</h3>
+      </div>
+      <p>Diagnosi nutrizionale e gestione di intolleranze e allergie alimentari con protocolli di eliminazione e reintroduzione.</p>
+      <ul class="list">
+        <li>Intolleranza al lattosio</li>
+<li>Celiachia e sensibilità al glutine</li>
+<li>Intolleranza al nichel</li>
+<li>Allergie LTP (proteine di trasporto lipidico)</li>
+<li>Allergie alimentari multiple</li>
+      </ul>
+    </article>
+<article class="card service">
+      <div class="card-top">
+        <div class="pill num">06</div>
+        <h3>Nutrizione nelle Fasi della Vita</h3>
+      </div>
+      <p>Piani nutrizionali adattati alle specifiche esigenze delle diverse fasi fisiologiche, dalla prima infanzia alla terza età.</p>
+      <ul class="list">
+        <li>Nutrizione pediatrica (divezzamento, età scolare)</li>
+<li>Adolescenza e sviluppo</li>
+<li>Gravidanza e allattamento</li>
+<li>Menopausa e andropausa</li>
+<li>Terza età e prevenzione sarcopenia</li>
+<li>Nutrizione per longevità attiva</li>
+      </ul>
+    </article>
+<article class="card service">
+      <div class="card-top">
+        <div class="pill num">07</div>
+        <h3>Nutrizione Sportiva Avanzata</h3>
+      </div>
+      <p>Programmazione nutrizionale per atleti amatoriali e agonisti, con focus su performance, recupero e composizione corporea ottimale.</p>
+      <ul class="list">
+        <li>Periodizzazione nutrizionale</li>
+<li>Timing dei nutrienti (nutrient timing)</li>
+<li>Strategie di idratazione</li>
+<li>Integrazione sportiva evidence-based</li>
+<li>Ricomposizione corporea</li>
+<li>Nutrizione pre/intra/post gara</li>
+      </ul>
+    </article>
+<article class="card service">
+      <div class="card-top">
+        <div class="pill num">08</div>
+        <h3>Supporto Disturbi Comportamento Alimentare</h3>
+      </div>
+      <p>Intervento nutrizionale specializzato all'interno di un percorso multidisciplinare per disturbi del comportamento alimentare.</p>
+      <ul class="list">
+        <li>Anoressia nervosa</li>
+<li>Bulimia nervosa</li>
+<li>Disturbo da alimentazione incontrollata (BED)</li>
+<li>ARFID e disturbi selettivi</li>
+<li>Riabilitazione nutrizionale guidata</li>
+<li>Collaborazione con team multidisciplinare</li>
+      </ul>
+    </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="metodologia" class="section">
+      <div class="container narrow">
+        <div class="section-head">
+          <div class="kicker">Il Mio Metodo</div>
+          <h2>Percorso Nutrizionale Strutturato</h2>
+          <p class="sublead">Un approccio scientifico e personalizzato in quattro fasi progressive, per garantire risultati duraturi e sostenibili.</p>
+        </div>
+
+        <div class="steps">
+          <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-body">
+        <h3>Prima Visita</h3>
+        <p>Anamnesi completa (clinica, alimentare, stile di vita), valutazione antropometrica e analisi bioimpedenzionometrica (BIA) per determinare composizione corporea e metabolismo basale.</p>
+      </div>
+    </div>
+<div class="step">
+      <div class="step-num">2</div>
+      <div class="step-body">
+        <h3>Piano Personalizzato</h3>
+        <p>Elaborazione piano alimentare individualizzato basato su obiettivi, preferenze e necessità.</p>
+      </div>
+    </div>
+<div class="step">
+      <div class="step-num">3</div>
+      <div class="step-body">
+        <h3>Monitoraggio</h3>
+        <p>Follow-up periodici per valutare progressi, adattare il piano nutrizionale, risolvere criticità e mantenere la motivazione attraverso supporto continuo.</p>
+      </div>
+    </div>
+<div class="step">
+      <div class="step-num">4</div>
+      <div class="step-body">
+        <h3>Mantenimento</h3>
+        <p>Educazione alimentare per autonomia nella gestione quotidiana, strategie per mantenimento risultati e prevenzione ricadute con controlli programmati.</p>
+      </div>
+    </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="competenze" class="section alt">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">Competenze Cliniche</div>
+          <h2>Aree di Specializzazione</h2>
+        </div>
+
+        <p class="sublead">La mia pratica professionale copre un ampio spettro di condizioni cliniche e fisiologiche, garantendo un intervento nutrizionale specializzato e basato sulle più recenti evidenze scientifiche.</p>
+
+        <div class="grid cards">
+          <article class="card comp">
+      <div class="comp-head">
+        <div class="emoji">👶</div>
+        <h3>Condizioni Fisiologiche</h3>
+      </div>
+      <ul class="list">
+        <li>Prima infanzia e divezzamento</li>
+<li>Età scolare e adolescenza</li>
+<li>Età adulta e invecchiamento attivo</li>
+<li>Terza età e longevità</li>
+<li>Gravidanza (pre-concepimento e gestazione)</li>
+<li>Allattamento e post-partum</li>
+      </ul>
+    </article>
+<article class="card comp">
+      <div class="comp-head">
+        <div class="emoji">🩺</div>
+        <h3>Patologie Metaboliche</h3>
+      </div>
+      <ul class="list">
+        <li>Diabete mellito tipo 1 e tipo 2</li>
+<li>Diabete gestazionale</li>
+<li>Sindrome metabolica</li>
+<li>Obesità e sovrappeso</li>
+<li>Sottopeso e malnutrizione</li>
+<li>Dislipidemia (colesterolo, trigliceridi)</li>
+      </ul>
+    </article>
+<article class="card comp">
+      <div class="comp-head">
+        <div class="emoji">❤️</div>
+        <h3>Patologie Cardiovascolari</h3>
+      </div>
+      <ul class="list">
+        <li>Ipertensione arteriosa</li>
+<li>Cardiopatia ischemica</li>
+<li>Insufficienza cardiaca</li>
+<li>Aterosclerosi</li>
+<li>Prevenzione primaria e secondaria</li>
+      </ul>
+    </article>
+<article class="card comp">
+      <div class="comp-head">
+        <div class="emoji">🔬</div>
+        <h3>Patologie Gastrointestinali</h3>
+      </div>
+      <ul class="list">
+        <li>Morbo di Crohn</li>
+<li>Rettocolite ulcerosa (RCU)</li>
+<li>Sindrome intestino irritabile (IBS)</li>
+<li>Reflusso gastroesofageo (GERD)</li>
+<li>Dispepsia funzionale</li>
+<li>Gastrite e ulcera peptica</li>
+<li>Diverticolosi e diverticolite</li>
+<li>Malassorbimenti intestinali</li>
+      </ul>
+    </article>
+<article class="card comp">
+      <div class="comp-head">
+        <div class="emoji">🩸</div>
+        <h3>Patologie Renali</h3>
+      </div>
+      <ul class="list">
+        <li>Insufficienza renale cronica (CKD stadi 1-5)</li>
+<li>Dialisi peritoneale</li>
+<li>Emodialisi</li>
+<li>Litiasi renale (calcolosi)</li>
+<li>Sindrome nefrosica</li>
+<li>Prevenzione progressione renale</li>
+      </ul>
+    </article>
+<article class="card comp">
+      <div class="comp-head">
+        <div class="emoji">⚠️</div>
+        <h3>Intolleranze e Allergie</h3>
+      </div>
+      <ul class="list">
+        <li>Intolleranza al lattosio</li>
+<li>Celiachia certificata</li>
+<li>Sensibilità al glutine non celiaca</li>
+<li>Intolleranza al nichel (SNAS)</li>
+<li>Allergie LTP (sindrome LTP)</li>
+<li>Allergie alimentari multiple</li>
+<li>Intolleranze da FODMAP</li>
+<li>Allergia alle proteine del latte</li>
+      </ul>
+    </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contatti" class="section">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">Prenota Consulenza</div>
+          <h2>Contatti</h2>
+          <p class="sublead">Ricevo su appuntamento presso lo studio professionale. Compila il form o contattami direttamente per fissare la tua prima visita nutrizionale.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="grid cards contact-cards">
+            <article class="card">
+              <h3>📍 Studio Professionale</h3>
+              <p><strong>Via Cerciello 74</strong><br>80049 Somma Vesuviana (NA)<br>Provincia di Napoli</p>
+              <div class="note">Ampio parcheggio gratuito disponibile</div>
+            </article>
+
+            <article class="card">
+              <h3>🕐 Orari di Ricevimento</h3>
+              <p><strong>Su appuntamento</strong></p>
+              <p><strong>Lunedì - Venerdì:</strong> 16:30 - 20:30</p>
+              <p><strong>Sabato:</strong> 14:30 - 18:30</p>
+              <p class="small">Incluso sabato pomeriggio per maggiore flessibilità</p>
+            </article>
+
+            <article class="card">
+              <h3>📞 Contatti Telefonici</h3>
+              <p><strong>Telefono:</strong><br><a href="tel:+393333213015">3333213015</a></p>
+              <p class="small">Preferibile contatto WhatsApp per prenotazioni</p>
+              <a class="btn primary full" href="https://wa.me/393333213015" target="_blank" rel="noopener">Prenota su WhatsApp</a>
+            </article>
+
+            <article class="card">
+              <h3>✉️ Email</h3>
+              <p><a href="mailto:dott.m.puzone.nutrizionista@gmail.com">dott.m.puzone.nutrizionista@gmail.com</a></p>
+              <p class="small">Tempo di risposta: entro 24-48 ore</p>
+            </article>
+          </div>
+
+          <div class="contact-actions card">
+            <h3>Contattami per Informazioni</h3>
+            <p>Scegli il metodo di contatto che preferisci. Puoi inviarmi un messaggio WhatsApp per una risposta rapida o scrivermi via email.</p>
+
+            <div class="stack">
+              <a class="btn primary full" target="_blank" rel="noopener"
+                 href="https://wa.me/393333213015?text=Buongiorno%20Dott.ssa%20Puzone%2C%0A%0AVorrei%20prenotare%20una%20consulenza%20nutrizionale.%0A%0ANome%3A%20%0ATelefono%3A%20%0AMotivo%20consulenza%3A%20">
+                 Contatta su WhatsApp
+              </a>
+
+              <a class="btn ghost full"
+                 href="mailto:dott.m.puzone.nutrizionista@gmail.com?subject=Richiesta%20Consulenza%20Nutrizionale&body=Buongiorno%20Dott.ssa%20Puzone%2C%0A%0AVorrei%20prenotare%20una%20consulenza%20nutrizionale.%0A%0ANome%20e%20Cognome%3A%20%0ATelefono%3A%20%0AMotivo%20della%20consulenza%3A%20%0A%0ACordiali%20saluti">
+                 Invia Email
+              </a>
+            </div>
+
+            <div class="panel accent">
+              <h4>Informazioni utili per la prima visita</h4>
+              <ul class="list">
+                <li>Eventuali esami ematochimici recenti</li>
+<li>Terapie farmacologiche in corso</li>
+<li>Certificazioni mediche per patologie diagnosticate</li>
+<li>Diario alimentare degli ultimi 3-7 giorni (se disponibile)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="map card">
+          <h3>Come Raggiungerci</h3>
+          <div class="map-frame">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3019.8558719891544!2d14.432945!3d40.871234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133b0f7b1c5d5555%3A0x5555555555555555!2sVia%20Cerciello%2C%2074%2C%2080049%20Somma%20Vesuviana%20NA!5e0!3m2!1sit!2sit!4v1234567890"
+              width="100%" height="420" style="border:0;" allowfullscreen=""
+              loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <p class="small"><strong>Indicazioni:</strong> Lo studio si trova a Somma Vesuviana, facilmente raggiungibile dalla A3 Napoli-Salerno (uscita Ottaviano). Ampio parcheggio gratuito disponibile in loco.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
       <div>
-        <strong>Dott.ssa Mafalda Puzone</strong><br>
-        <span>Biologa Nutrizionista</span>
+        <div class="brand foot">
+          <span class="brand-mark">MP</span>
+          <span class="brand-text">
+            <span class="brand-name">Dott.ssa Mafalda Puzone</span>
+            <span class="brand-sub">Biologa Nutrizionista</span>
+          </span>
+        </div>
+        <p class="small">
+          Esperienza trentennale nella nutrizione clinica personalizzata. Approccio scientifico, multidisciplinare e basato sulle evidenze per il tuo benessere nutrizionale.
+        </p>
+      </div>
+
+      <div class="foot-links">
+        <h4>Link Rapidi</h4>
+        <a href="#home">Home</a>
+        <a href="#chi-sono">Chi Sono</a>
+        <a href="#servizi">Servizi</a>
+        <a href="#metodologia">Metodologia</a>
+        <a href="#competenze">Competenze</a>
+      </div>
+
+      <div class="foot-links">
+        <h4>Servizi</h4>
+        <a href="#servizi">Piani Personalizzati</a>
+        <a href="#servizi">Nutrizione Clinica</a>
+        <a href="#servizi">Nutrizione Sportiva</a>
+        <a href="#servizi">Intolleranze</a>
+        <a href="#servizi">Patologie Renali</a>
+      </div>
+
+      <div class="foot-links">
+        <h4>Contatti</h4>
+        <div>Via Cerciello 74</div>
+        <div>80049 Somma Vesuviana (NA)</div>
+        <a href="tel:+393333213015">3333213015</a>
+        <a href="mailto:dott.m.puzone.nutrizionista@gmail.com">dott.m.puzone.nutrizionista@gmail.com</a>
       </div>
     </div>
-    <nav>
-      <a href="#chi-sono">Chi Sono</a>
-      <a href="#servizi">Servizi</a>
-      <a href="#contatti">Contatti</a>
-    </nav>
-  </div>
-</header>
 
-<section class="hero">
-  <div class="container hero-grid">
-    <div class="hero-text">
-      <span class="badge">Esperienza Trentennale</span>
-      <h1>Nutrizione Clinica su Misura per il Tuo Benessere</h1>
-      <p>
-        Piani alimentari personalizzati basati su evidenze scientifiche,
-        analisi bioimpedenzionometrica e approccio multidisciplinare.
-      </p>
-      <div class="hero-cta">
-        <a class="btn-primary" href="#contatti">Prenota una Consulenza</a>
-        <a class="btn-secondary" href="tel:+393333213015">3333213015</a>
+    <div class="container footer-bottom">
+      <p>© 2025 Dott.ssa Mafalda Puzone - Biologa Nutrizionista | CF: PZNMLD66P69E855F | P.IVA: 03966881215 | Albo: 042160</p>
+      <div class="legal">
+        <a href="privacy.html">Privacy Policy</a><span>·</span>
+        <a href="cookie.html">Cookie Policy</a><span>·</span>
+        <a href="#">Note Legali</a>
       </div>
     </div>
-    <div class="hero-image">
-      <img src="assets/img/mafaldapuzone-ritratto.jpg" alt="Foto professionale" loading="lazy" decoding="async">
+  </footer>
+
+  <a class="wa-float" href="https://wa.me/393333213015" target="_blank" rel="noopener" aria-label="Contattaci su WhatsApp">WhatsApp</a>
+
+  <!-- GDPR / Cookie Banner + Preferences Modal -->
+  <div id="cookie-banner" class="cookie-banner" role="dialog" aria-live="polite" aria-label="Preferenze cookie" hidden>
+    <div class="cookie-banner__inner">
+      <div class="cookie-banner__text">
+        <strong>Cookie e Privacy</strong>
+        <p>
+          Questo sito utilizza cookie tecnici necessari al funzionamento e, solo se lo desideri,
+          cookie opzionali (es. statistiche). Puoi accettare, rifiutare o personalizzare.
+        </p>
+        <p class="cookie-banner__links">
+          <a href="privacy.html">Privacy Policy</a>
+          <span>·</span>
+          <a href="cookie.html">Cookie Policy</a>
+        </p>
+      </div>
+
+      <div class="cookie-banner__actions">
+        <button type="button" class="cookie-btn cookie-btn--ghost" data-cookie="reject">Rifiuta</button>
+        <button type="button" class="cookie-btn cookie-btn--ghost" data-cookie="customize">Personalizza</button>
+        <button type="button" class="cookie-btn cookie-btn--primary" data-cookie="accept">Accetta</button>
+      </div>
     </div>
   </div>
-</section>
 
-<section id="chi-sono" class="section">
-  <div class="container narrow">
-    <h2>Chi Sono</h2>
-    <p>
-      Sono la <strong>Dott.ssa Mafalda Puzone</strong>, Biologa Nutrizionista con
-      un'esperienza trentennale nel campo della nutrizione clinica.
-    </p>
+  <div id="cookie-modal" class="cookie-modal" role="dialog" aria-modal="true" aria-label="Impostazioni cookie" hidden>
+    <div class="cookie-modal__backdrop" data-cookie="close"></div>
+    <div class="cookie-modal__panel" role="document">
+      <div class="cookie-modal__header">
+        <h3>Preferenze Cookie</h3>
+        <button type="button" class="cookie-icon-btn" aria-label="Chiudi" data-cookie="close">✕</button>
+      </div>
 
-    <div class="info-panel">
-      <div><strong>P. IVA:</strong> 03966881215</div>
-      <div><strong>Albo:</strong> 042160</div>
-      <div><strong>Email:</strong> dott.m.puzone.nutrizionista@gmail.com</div>
-    </div>
+      <div class="cookie-modal__body">
+        <p>
+          Qui puoi gestire le preferenze. I cookie tecnici sono sempre attivi perché necessari al funzionamento del sito.
+        </p>
 
-    <div class="about-media">
-      <img src="assets/img/studio-bilancia.jpg" alt="Studio professionale" loading="lazy" decoding="async">
+        <div class="cookie-opt">
+          <div class="cookie-opt__left">
+            <div class="cookie-opt__title">Cookie Tecnici (necessari)</div>
+            <div class="cookie-opt__desc">Essenziali per la navigazione e le funzioni di base.</div>
+          </div>
+          <div class="cookie-opt__right">
+            <label class="cookie-switch cookie-switch--locked">
+              <input type="checkbox" checked disabled />
+              <span class="cookie-slider"></span>
+            </label>
+          </div>
+        </div>
+
+        <div class="cookie-opt">
+          <div class="cookie-opt__left">
+            <div class="cookie-opt__title">Cookie Statistici (opzionali)</div>
+            <div class="cookie-opt__desc">Misurano in forma aggregata l’uso del sito. (Se non usi analytics, puoi lasciarli off.)</div>
+          </div>
+          <div class="cookie-opt__right">
+            <label class="cookie-switch">
+              <input id="cookie-analytics" type="checkbox" />
+              <span class="cookie-slider"></span>
+            </label>
+          </div>
+        </div>
+
+        <div class="cookie-opt">
+          <div class="cookie-opt__left">
+            <div class="cookie-opt__title">Cookie Marketing (opzionali)</div>
+            <div class="cookie-opt__desc">Usati per personalizzazione/advertising. (Consigliato OFF se non li usi.)</div>
+          </div>
+          <div class="cookie-opt__right">
+            <label class="cookie-switch">
+              <input id="cookie-marketing" type="checkbox" />
+              <span class="cookie-slider"></span>
+            </label>
+          </div>
+        </div>
+
+        <div class="cookie-modal__links">
+          <a href="privacy.html">Privacy Policy</a>
+          <span>·</span>
+          <a href="cookie.html">Cookie Policy</a>
+        </div>
+      </div>
+
+      <div class="cookie-modal__footer">
+        <button type="button" class="cookie-btn cookie-btn--ghost" data-cookie="reject">Rifiuta</button>
+        <button type="button" class="cookie-btn cookie-btn--primary" data-cookie="save">Salva preferenze</button>
+      </div>
     </div>
   </div>
-</section>
 
-<section id="servizi" class="section light">
-  <div class="container">
-    <h2>Servizi</h2>
-    <div class="cards">
-      <div class="card">Piani Alimentari Personalizzati</div>
-      <div class="card">Nutrizione Clinica</div>
-      <div class="card">Nutrizione Sportiva</div>
-      <div class="card">Gestione Patologie Metaboliche</div>
-    </div>
-  </div>
-</section>
-
-<section id="contatti" class="section">
-  <div class="container narrow">
-    <h2>Contatti</h2>
-    <p>
-      Ricevo su appuntamento presso lo studio professionale.
-    </p>
-    <div class="contact-box">
-      <p><strong>Telefono:</strong> <a href="tel:+393333213015">3333213015</a></p>
-      <p><strong>Email:</strong> <a href="mailto:dott.m.puzone.nutrizionista@gmail.com">dott.m.puzone.nutrizionista@gmail.com</a></p>
-      <a class="btn-primary" href="https://wa.me/393333213015">Contatta su WhatsApp</a>
-    </div>
-  </div>
-</section>
-
-<footer class="footer">
-  <div class="container footer-grid">
-    <p>© 2025 Dott.ssa Mafalda Puzone</p>
-    <div>
-      <a href="privacy.html">Privacy Policy</a> ·
-      <a href="cookie.html">Cookie Policy</a>
-    </div>
-  </div>
-</footer>
-
-<!-- GDPR Banner -->
-<div id="cookie-banner" class="cookie-banner">
-  <p>Questo sito utilizza solo cookie tecnici. Puoi accettare o rifiutare.</p>
-  <div>
-    <button data-cookie="reject">Rifiuta</button>
-    <button data-cookie="accept">Accetta</button>
-  </div>
-</div>
-
-<script src="js/script.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>

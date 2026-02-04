@@ -1,44 +1,22 @@
 (() => {
+  // Mobile nav
   const toggle = document.querySelector('.nav-toggle');
-  const navList = document.querySelector('.nav-list');
+  const nav = document.querySelector('.nav');
+  if (toggle && nav) {
+    toggle.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  }
 
-  if (!toggle || !navList) return;
-
-  const setOpen = (open) => {
-    toggle.setAttribute('aria-expanded', String(open));
-    navList.classList.toggle('is-open', open);
-  };
-
-  toggle.addEventListener('click', () => {
-    const open = toggle.getAttribute('aria-expanded') === 'true';
-    setOpen(!open);
-  });
-
-  navList.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => setOpen(false));
-  });
-
+  // Close nav on link click (mobile)
   document.addEventListener('click', (e) => {
-    const open = toggle.getAttribute('aria-expanded') === 'true';
-    if (!open) return;
-    if (toggle.contains(e.target) || navList.contains(e.target)) return;
-    setOpen(false);
+    const a = e.target.closest('.nav a');
+    if (a && nav && nav.classList.contains('open')) nav.classList.remove('open');
   });
 
-  document.addEventListener('keydown', (e) => {
-    const open = toggle.getAttribute('aria-expanded') === 'true';
-    if (!open) return;
-    if (e.key === 'Escape') setOpen(false);
-  });
-})();
-
-
-/* =========================
-   GDPR / Cookie Consent (localStorage)
-========================= */
-(() => {
+  // Cookie consent (localStorage)
   const STORAGE_KEY = "cookie_consent_v1";
-
   const banner = document.getElementById("cookie-banner");
   const modal = document.getElementById("cookie-modal");
   const analytics = document.getElementById("cookie-analytics");
@@ -66,68 +44,43 @@
   const openModal = () => { modal.hidden = false; };
   const closeModal = () => { modal.hidden = true; };
 
-  const applyConsent = (c) => {
-    // Hook: carica eventuali script opzionali solo se consentito
-    // if (c.analytics) loadAnalytics();
-  };
-
   const init = () => {
     const c = readConsent();
-    if (!c) {
-      showBanner();
-      return;
-    }
-    hideBanner();
-    applyConsent(c);
+    if (!c) showBanner();
+    else hideBanner();
   };
 
   const handleAction = (action) => {
     if (action === "accept") {
       writeConsent({ analytics: true, marketing: true });
-      hideBanner();
-      closeModal();
-      applyConsent(readConsent());
-      return;
+      hideBanner(); closeModal(); return;
     }
-
     if (action === "reject") {
       writeConsent({ analytics: false, marketing: false });
-      hideBanner();
-      closeModal();
-      applyConsent(readConsent());
-      return;
+      hideBanner(); closeModal(); return;
     }
-
     if (action === "customize") {
       const c = readConsent();
       if (analytics) analytics.checked = c ? !!c.analytics : false;
       if (marketing) marketing.checked = c ? !!c.marketing : false;
-      openModal();
-      return;
+      openModal(); return;
     }
-
     if (action === "save") {
       writeConsent({
         analytics: analytics ? analytics.checked : false,
         marketing: marketing ? marketing.checked : false
       });
-      hideBanner();
-      closeModal();
-      applyConsent(readConsent());
-      return;
+      hideBanner(); closeModal(); return;
     }
-
-    if (action === "close") {
-      closeModal();
-      return;
-    }
+    if (action === "close") { closeModal(); return; }
   };
 
   document.addEventListener("click", (e) => {
     const btn = e.target.closest("[data-cookie]");
-    if (!btn) return;
-    const action = btn.getAttribute("data-cookie");
-    handleAction(action);
+    if (btn) handleAction(btn.getAttribute("data-cookie"));
+
+    // Close modal clicking backdrop
+    if (e.target.classList.contains('cookie-modal__backdrop')) closeModal();
   });
 
   document.addEventListener("keydown", (e) => {
